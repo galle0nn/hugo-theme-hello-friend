@@ -1,19 +1,23 @@
 <footer class="footer">
+    {{- with .Site.Params.social }}
+      <div>
+      {{ partial "social-icons.html" . }}
+      </div>
+    {{ end }}
+
   <div class="footer__inner">
     {{ if $.Site.Copyright }}
       <div class="copyright copyright--user">{{ $.Site.Copyright | safeHTML }}</div>
       {{ else }}
       {{ partial "logo.html" . }}
+
       <div class="copyright">
         <span
-          >© {{ now.Year }} Powered by
-          <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span
-        >
-        <span
-          >Theme created by
-          <a href="https://twitter.com/panr" target="_blank" rel="noopener">panr</a></span
-        >
-      </div>
+          >© {{ now.Year }} galle0n · Powered by the
+          <a href="https://github.com/panr/hugo-theme-hello-friend" target="_blank" rel="noopener">Hello Friend</a> theme for <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>
+        </span>
+
+        </div>
     {{ end }}
   </div>
 </footer>
