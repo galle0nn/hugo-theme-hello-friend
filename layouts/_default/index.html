@@ -17,14 +17,12 @@
   <div class="posts">
     {{ range $paginator.Pages }}
     <article class="post on-list">
-      <h1 class="post-title">{{ .Title | markdownify }}</h1>
       
       <div class="container">
         <div class="post-container">
           <div class="image-container">
             <img src="homepage/images/ship2.jpg" class="circular-image">   
           </div>  
-         
             <h1 class="post-title">{{ .Title | markdownify }}</h1>  
         </div>
   
@@ -40,15 +38,15 @@
             margin: 0 auto;
           }
           .image-container {
-            width: 220px;
-            height: 220px;
+            width: 240px;
+            height: 240px;
             border-radius: 100%;
             overflow: hidden;
             margin-bottom: -70px;
             position: relative;
           }
           .circular-image {
-            width: 220px;
+            width: 240px;
             height: auto;
             justify-content: center;
           }
